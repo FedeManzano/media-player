@@ -49,20 +49,20 @@ Ejecutamos el archivo :dvd:`setup.exe` y aceptamos en el asistente de instalaci�
 
 Luego, desde el menú de busqueda del sistema operativo, buscamos el :musical_note: `ReproductorMusicaTagEditables.exe`.  
 
-![Ejecutar App](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/ejecutar.png?raw=true)
+![Ejecutar App](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/ejecutar.png?raw=true)
 
 ### Presentación
 
 El esquema básico de los controles puede verse en la siguiente imágen:
 
-![Esquema](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/presentacion1.png?raw=true)
+![Esquema](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/presentacion1.png?raw=true)
 
 ### Seleccionar
 
 Cuando iniciamos por primera vez el reproductor, el mismo, se encuentra vacío. Para cargar los archivos de audio lo hacemos desde el menú secundario de la página principal.
 
 
-![Seleccionar](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/seleccionar.png?raw=true)
+![Seleccionar](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/seleccionar.png?raw=true)
 
 En el momento de seleccionar un directorio todos los archivos de audio que posean un formato aceptado por el reproductor se van a cargar en el repositorio de canciones de la aplicación.
 
@@ -111,7 +111,7 @@ Una vez cargado de respaldo hay que reiniciar el reproductor para ver los cambio
 
 Para poder filtrar las canciones agregadas al reproductor por Álbumes, Artistas, Géneros, guardar el historial y crear listas de reproducción personalizadas es necesario que la información de los metadatos de los archivos de audio exista. Esto se puede realizar a través del botón :label: del menú secundario de la página principal.
 
-![Editor](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editor.png?raw=true)
+![Editor](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editor.png?raw=true)
 
 #### Cargar directorio a editar
 
@@ -127,15 +127,15 @@ Completando estos dos campos el reproductor va a poder dar acceso rápido a las 
 
 El procedimiento para realizar esto es marcar todas las caciones desde el botón `Marcar Todas` en la parte superior.
 
-![Edición mínima](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionMinima.png?raw=true)
+![Edición mínima](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionMinima.png?raw=true)
 
 Con esto editamos los campos mínimos y suficientes. El resultado queda de la siguiente manera.
 
-![Edición mínima](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/resultadoEdicion.png?raw=true)
+![Edición mínima](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/resultadoEdicion.png?raw=true)
 
 #### Edición completa
 
 Para editar toda la información simplemente hay que llenar los demás campos.
 
-![Edición completa](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionCompleta.png?raw=true)
+![Edición completa](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionCompleta.png?raw=true)
 
