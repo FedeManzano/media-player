@@ -1,0 +1,132 @@
+﻿
+using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
+using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Respaldo;
+using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
+using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
+using System;
+using System.Collections.Generic;
+using System.Windows.Controls;
+using System.Windows.Forms;
+
+namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
+{
+    public partial class TodasLasCanciones : Page
+    {
+        
+        public TodasLasCanciones()
+        {
+            InitializeComponent();
+           
+            panelPrincipal.AgregarElementosAlFiltro();
+            scrollCanciones.ScrollToVerticalOffset(panelPrincipal.ScrollVertical);
+
+            Dictionary<string, List<Cancion>> dic = ListasReproduccion.GenerarListasDinamicasFavoritos();
+
+            if(dic.Count > 0)
+            {
+                panelPrincipal.RegalosVisibilidad = System.Windows.Visibility.Visible;
+                panelPrincipal.DicCanciones = dic;
+            }
+        }
+
+        private void InfoCancionTabla_PlayClick(object sender, EventArgs e)
+        {
+            panelPrincipal.ScrollVertical = scrollCanciones.VerticalOffset;
+        }
+
+        private void Actualiza_El_Listado_Canciones(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
+        {
+            panelPrincipal.ScrollVertical = scrollCanciones.VerticalOffset;
+            panelPrincipal.AgregarElementosAlFiltro();
+        }
+
+        private void InfoCancionTabla_ArtistaClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            if (i.ArtistaInfo == "Desconocido")
+            {
+                System.Windows.Forms.MessageBox.Show("El artista que intenta acceder es desconocido, por lo tanto, la metadata de los archivos de audio es inexistente. Puede solucionar esto desde el botón (EDITAR TAGS) de la pestaña 'Inicio' para agregar la información pertinente.", "Artista Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            this.NavigationService.Navigate(new InfoArtistaPage(i.ArtistaInfo));
+        }
+
+        private void InfoCancionTabla_AlbumClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            if (i.AlbumInfo == "Desconocido")
+            {
+                System.Windows.Forms.MessageBox.Show("El álbum al que intenta acceder es desconocido, por lo tanto, la metadata de los archivos de audio es inexistente. Puede solucionar esto desde el botón (EDITAR TAGS) de la pestaña 'Inicio' para agregar la información pertinente.", "Álbum Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+           
+            this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));  
+        }
+
+       
+        private void InfoCancionTabla_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            if (i.EstaSeleccionado())
+            {
+                panelPrincipal.SeleccionarCancion(i);
+                agregarControl.Visibilidad = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+
+                panelPrincipal.DeseleccionarCancion(i);
+                if(panelPrincipal.CantidadSeleccionado() == 0 && agregarControl.Visibilidad == System.Windows.Visibility.Visible)
+                {
+                    agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
+                }
+            }
+        }
+
+        private void agregarControl_AgregarClick(object sender, EventArgs e)
+        {
+            panelPrincipal.CargarListadoEneditorListas();
+        }
+
+        private void agregarControl_DesmarcarClick(object sender, EventArgs e)
+        {
+            panelPrincipal.Irg.Partes.Clear();
+            panelPrincipal.AgregarElementosAlFiltro();
+            panelPrincipal.DeseleccionarTodas();
+            agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            EditarTags editor = new EditarTags();
+            editor.ShowDialog();
+        }
+
+        private void Ver_Historial(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HistorialPage());
+        }
+
+        private void Ver_Regalos(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RegalosPage(panelPrincipal.DicCanciones));
+        }
+
+        private void Respaldar_Datos(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Respaldo.CrearRespaldo();
+        }
+
+        private void Recuperar_Respaldo(object sender, System.Windows.RoutedEventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Si desea cargar un reapaldo anterior todos los elementos que se hayan incorporado después de la creación de este reapaldo se perderán.","Importante", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes)
+            {
+                Respaldo.CargarRespaldo();
+            }
+        }
+    }
+}

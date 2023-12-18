@@ -1,0 +1,212 @@
+﻿<Page x:Class="ReproductorMusicaTagEditables.Mvvm.View.Pages.TodasLasCanciones"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
+      xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:agregarCanciones="clr-namespace:ReproductorMusicaTagEditables.Controls.AgregarALista"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TodasLasCanciones">
+
+    <Page.Resources>
+        <ResourceDictionary Source="/Mvvm/View/Pages/Theme/generalesPageTheme.xaml"/>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <viewModel:PrincipalViewModel x:Name="panelPrincipal"/>
+    </Page.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="650"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Style="{StaticResource tituloPrincipalPaginas}" 
+                       Text="{Binding Path=Irg.TitutloVentana}"/>
+            
+            <StackPanel Grid.Column="1" 
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center" 
+                        Orientation="Horizontal">
+                
+                <mah:ProgressRing  
+                    Margin="0 0 10 0" 
+                    Foreground="Red"
+                    IsActive="{Binding Irg.Preloader}"/>
+                
+                <Button  Style="{StaticResource btnEliminarHistorial}"
+                         Margin="0 0 10 0"
+                         Command="{Binding CargarMusicaCommand}"
+                         ToolTip="Seleccionar directorio"
+                         IsEnabled="{Binding Habilitados}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome 
+                            Style="{StaticResource iconEliminarHistorial}" 
+                            Kind="FolderOpenSolid"
+                            Foreground="Red"/>
+                        
+                    </StackPanel>
+                </Button>
+                <Button  Style="{StaticResource btnEliminarHistorial}"
+                         ToolTip="Agregar canciones a las ya existentes"
+                         Margin="0 0 10 0"
+                         Command="{Binding AgregarCommand}"
+                         IsEnabled="{Binding Habilitados}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" 
+                                Kind="PlusSolid"
+                                Foreground="Gray"/>
+                    </StackPanel>
+                </Button>
+                <Button  Style="{StaticResource btnEliminarHistorial}"
+                         Margin="0 0 10 0"
+                         Click="Respaldar_Datos"
+                         ToolTip="Respaldar los datos guardados"
+                         IsEnabled="{Binding Habilitados}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome 
+                                Style="{StaticResource iconEliminarHistorial}" 
+                                Kind="SaveRegular"
+                                Foreground="Gray"/>
+
+                    </StackPanel>
+                </Button>
+                <Button  Style="{StaticResource btnEliminarHistorial}"
+                         Margin="0 0 10 0"
+                         Click="Recuperar_Respaldo"
+                         ToolTip="Recuperar información respaldada"
+                         IsEnabled="{Binding Habilitados}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome 
+                                Style="{StaticResource iconEliminarHistorial}" 
+                                Kind="DownloadSolid"
+                                Foreground="Gray"/>
+
+                    </StackPanel>
+                </Button>
+                <Button  Style="{StaticResource btnEliminarHistorial}"
+                         ToolTip="Editar tags"
+                         Margin="0 0 10 0"
+                         Click="Button_Click"
+                         IsEnabled="{Binding Habilitados}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" 
+                                                Kind="TagSolid"
+                                                Foreground="Gray"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            
+        </Grid>
+        
+        <Grid Grid.Row="1" Margin="0 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="600"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock 
+                           Text="Todas las Canciones" 
+                           VerticalAlignment="Center"
+                           Foreground="White" 
+                           FontSize="22" />
+                <TextBlock 
+                           Text="{Binding CantidadCanciones}" 
+                           VerticalAlignment="Center"
+                           Foreground="#ccc" 
+                           FontSize="12"
+                           Margin="0 4 0 0 "/>
+                <Button Style="{StaticResource btnEliminarHistorial}" Click="Ver_Historial"
+                        ToolTip="Últimos escuchados." Margin="15 0 0 0"
+                        Visibility="{Binding HayHistorial}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="HistorySolid"/>
+                        <TextBlock Style="{StaticResource txtEliminacion}" Text="Más Recientes" Margin="5 0 0 0"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource btnEliminarHistorial}" Click="Ver_Regalos"
+                        ToolTip="Listas de regalo." Margin="15 0 0 0"
+                        Visibility="{Binding RegalosVisibilidad}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="GiftSolid" Foreground="Red"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+
+           
+
+            <agregarCanciones:AgregarAListaControl  HorizontalAlignment="Right"
+                                                    Grid.Column="1"
+                                                    x:Name="agregarControl"
+                                                    AgregarClick="agregarControl_AgregarClick"
+                                                    DesmarcarClick="agregarControl_DesmarcarClick"/>
+            
+            
+        </Grid>
+
+        <Border Grid.Row="2" Width="3500" Background="Black" Opacity="0"
+                Margin="-1300 0 0 0 "
+                Visibility="{Binding CapaProtectora}">
+            
+        </Border>
+
+        <TextBlock x:Name="txtSinCanciones" 
+                   Text="No hay canciones cargadas" 
+                   Foreground="#ccc" 
+                   Grid.Row="2"
+                   FontSize="22"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Visibility="{Binding Irg.IsMensajeVisible}"/>
+
+        <ScrollViewer x:Name="scrollCanciones"
+                      Grid.Row="2" 
+                      VerticalScrollBarVisibility="Auto"
+                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones"
+                      Visibility="{Binding Irg.IslistadoVisible}">
+            <ItemsControl  x:Name="itemList" 
+                           ItemsSource="{Binding Irg.Partes}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <tupla:InfoCancionTabla Comando="{Binding ElementName=panelPrincipal, Path=PlayCommand}"
+                                                ParametroComando="{Binding .}"
+                                                PlayClick="InfoCancionTabla_PlayClick"
+                                                ArtistaClick="InfoCancionTabla_ArtistaClick"
+                                                AlbumClick="InfoCancionTabla_AlbumClick"
+                                                MouseLeave="InfoCancionTabla_MouseLeave"
+                                                NumeroInfo="{Binding Numero}"
+                                                TituloInfo="{Binding Titulo}"
+                                                ArtistaInfo="{Binding Artista}"
+                                                AlbumInfo="{Binding Album}"
+                                                GeneroInfo="{Binding Genero}"
+                                                AnoInfo="{Binding FechaLanzamiento}"
+                                                DuracionInfo="{Binding Duracion}"
+                                                ColorTexto="{Binding EstadoColor}"
+                                                HabilitadoCarga="{Binding ElementName=panelPrincipal, Path=Habilitados}"
+                                                Habilitado="False">
+                        </tupla:InfoCancionTabla>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Page>

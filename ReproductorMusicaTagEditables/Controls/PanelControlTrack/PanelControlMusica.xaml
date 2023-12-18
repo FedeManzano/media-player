@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.PanelControlTrack.PanelControlMusica"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.PanelControlTrack"
+             mc:Ignorable="d"
+             x:Name="panelControl">
+
+    <Control.Resources>
+        <ResourceDictionary Source="/Controls/PanelControlTrack/PanelControlTheme.xaml"/>
+    </Control.Resources>
+
+
+    <Border MinWidth="150" CornerRadius="0 0 20 0">
+        <StackPanel>
+            <Border x:Name="contenedorVolumen"
+                    Style="{StaticResource bordeSliderVolumen}" 
+                    Visibility="Collapsed">
+                <Slider x:Name="sliderVolumen"
+                        Style="{DynamicResource SliderStyle1}"
+                        IsSelectionRangeEnabled="True"
+                        SelectionEnd="{Binding ElementName=sliderVolumen, Path=Value}"
+                        Minimum="0"
+                        Maximum="0.5"
+                        IsMoveToPointEnabled="True"
+                        Width="200"
+                        ValueChanged="OnValueChanged"
+                        Value="{Binding ElementName=panelControl, Path=ValorVolumen}">
+                </Slider>
+            </Border>
+            
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                
+                <Button Style="{StaticResource btnPanel}" 
+                        Click="OnClickAnterior"
+                        Command="{Binding ElementName=panelControl,Path=AtrasCommand}"
+                        ToolTip="Pista Anterior">
+                        
+                    <fa:PackIconFontAwesome Kind="BackwardSolid"/>
+                </Button>
+                <Button Style="{StaticResource btnPanel}" 
+                        Click="OnClickPlay"
+                        Command="{Binding ElementName=panelControl, Path=PlayCommand}"
+                        ToolTip="Play / Pausa">
+                    <fa:PackIconFontAwesome Kind="{Binding ElementName=panelControl,Path=IconPlay}"/>
+                </Button>
+                <Button Style="{StaticResource btnPanel}" 
+                        Click="OnClickSiguiente"
+                        Command="{Binding ElementName=panelControl, Path=SiguienteCommand}"
+                        ToolTip="Cancion siguiente">
+                    <fa:PackIconFontAwesome Kind="ForwardSolid"/>
+                </Button>
+                <Button x:Name="btnVolumen" Style="{StaticResource btnPanel}" 
+                        Margin="60 0 0 0" 
+                        Click="Mostrar_Slider_Volumen"
+                        ToolTip="Volumen">
+                    <fa:PackIconFontAwesome Kind="VolumeUpSolid"/>
+                </Button>
+                <Button x:Name="btnRandom"
+                        Style="{StaticResource btnPanel}"
+                        Click="Random_On_Off"
+                        ToolTip="Reprodución aleatoria">
+                    <fa:PackIconFontAwesome x:Name="iconRandom" Kind="RandomSolid"/>
+                </Button>
+                <Button x:Name="btnCirculo"
+                        Style="{StaticResource btnPanel}"
+                        ToolTip="Repetir en circulos"
+                        Click="Circulos_On_Off">
+                    <fa:PackIconFontAwesome x:Name="iconCirculo" Kind="ReplyAllSolid"/>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

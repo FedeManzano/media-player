@@ -1,0 +1,183 @@
+﻿<Window x:Class="ReproductorMusicaTagEditables.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mp="clr-namespace:ReproductorMusicaTagEditables.Controls.Menu"
+        xmlns:pm="clr-namespace:ReproductorMusicaTagEditables.Controls.PanelControlTrack"
+        xmlns:pinfo="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoArtista"
+        xmlns:tiempo="clr-namespace:ReproductorMusicaTagEditables.Controls.TiempoTrack"
+        xmlns:ventana="clr-namespace:ReproductorMusicaTagEditables.Controls.ManejadorVentana"
+        xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
+        xmlns:view="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View"
+        mc:Ignorable="d"
+        Title="Reproductor de Música" Height="740" Width="1250"
+        MinHeight="740"
+        MinWidth="1250"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True"
+        Background="Transparent"
+        MouseDown="Arrastrar_Ventana"
+        Icon="/Icono/nota-musical.ico"
+        Loaded="Window_Loaded">
+
+
+    <!-- Data context ../ViewModel/ReproductorViewModel.cs -->
+    <Window.DataContext>
+        <viewModel:ReproductorViewModel x:Name="reproViewModel"/>
+    </Window.DataContext>
+    
+    <!-- Enlace de los viewModel con las view -->
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:PrincipalViewModel}">
+            <view:PrincipalView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ArtistaViewModel}">
+            <view:ArtistaView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:AlbumesViewModel}">
+            <view:AlbumesView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ListasViewModel}">
+            <view:ListasView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:FavoritosViewModel}">
+            <view:FavoritosView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:GenerosViewModel}">
+            <view:GenerosView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:DescargasViewModel}">
+            <view:DescargasView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:HistorialViewModel}">
+            <view:HistorialView/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Border CornerRadius="10" 
+            BorderBrush="{StaticResource bordeVentana}" 
+            BorderThickness="2">
+
+        <Border CornerRadius="10" 
+                Background="{StaticResource gradientePrincipal}">
+
+            <Grid >
+                <!-- 2 Columnas generales -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <!-- Menu lateral de la aplicación -->
+                <mp:Menu CommandInicio="{Binding PrincipalCommand}"
+                         CommandArtistas="{Binding ArtistasCommand}"
+                         CommandAlbumes="{Binding AlbumesCommand}"
+                         CommandListas="{Binding ListasCommand}"
+                         CommandFavoritos="{Binding FavoritosCommand}"
+                         CommandGeneros="{Binding GenerosCommand}"
+                         CommandDescargas="{Binding DescargasCommand}"
+                         CommandHistorial="{Binding HistorialCommand}"
+                         DocClick="Menu_DocClick"/>
+
+                <!-- Main Section -->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="120"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Control de la ventana -->
+                    <StackPanel Grid.Row="0">
+                        <ventana:ManejadorVentana Margin="10"
+                                                  Cerrar="Cerrar_App"
+                                                  Minimizar="Minimizar_Ventana"/>
+                    </StackPanel>
+
+                    <!-- Contenido de las páginas -->
+                    <ContentControl Grid.Row="1" Content="{Binding CurrentView}"/>
+
+                    <!-- Control de track-->
+                    <Border CornerRadius="0 0 10 0" 
+                            Grid.Row="2" 
+                            Background="#1E2123">
+                        <Grid>
+                            <Grid >
+                                <!-- Filas 2 de la grilla-->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Columnas 3 -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Info de la cancion en curso 
+                                Su Artista, Album y nombre -->
+                                <pinfo:InfoArtista x:Name="infoArtista"
+                                                   Margin="10 0 0 0" 
+                                                   Grid.Column="0" 
+                                                   Grid.RowSpan="2"
+                                                   NombreArtista="Desconocido"
+                                                   NombreAlbum="Desconocido"
+                                                   TituloCancion="..."/>
+
+                                <!-- Panel de control del track, volumen etc-->
+                                <pm:PanelControlMusica x:Name="panelControlMusica"
+                                                       Grid.Column="1" 
+                                                       Grid.Row="0" 
+                                                       VerticalAlignment="Bottom" 
+                                                       ValorVolumen="5"
+                                                       IconPlay="{Binding Irg.IconoPlay}"
+                                                       PlayCommand="{Binding PlayCommand}"
+                                                       SiguienteCommand="{Binding SiguienteCommand}"
+                                                       AtrasCommand="{Binding AnteriorCommand}"/>
+
+                                <!-- Manejador del tiempo de pista -->
+                                <Slider Style="{DynamicResource SliderStyle1}" x:Name="sliderLineTime"
+                                        Grid.Column="1" 
+                                        Grid.Row="1"
+                                        VerticalAlignment="Top"
+                                        IsSelectionRangeEnabled="True"
+                                        Margin="10 0 0 0"
+                                        IsMoveToPointEnabled="True"
+                                        Minimum="0"
+                                        SelectionEnd="{Binding ElementName=sliderLineTime, Path=Value}"
+                                        Thumb.DragStarted="Comenzar_Arrastre_Slider_TimeLineSlider"
+                                        Thumb.DragCompleted="Finalizar_Arrastre_Slider_TimeLineSlider"
+                                        MouseLeftButtonUp="sliderLineTime_MouseLeftButtonUp"
+                                        PreviewMouseLeftButtonUp="sliderLineTime_MouseLeftButtonDown"/>
+
+                                <!-- Tiempo transcurrido de la pista / 
+                                Tiempo que falta para que termina la pista-->
+                                <tiempo:TiempoTrack  x:Name="controlTiempo"
+                                                     Grid.Column="2" 
+                                                     Grid.RowSpan="2"/>
+
+                                <MediaElement x:Name="mediaReproductor" 
+                                              HorizontalAlignment="Left" 
+                                              Height="0"
+                                              Width="0"
+                                              VerticalAlignment="Top" 
+                                              LoadedBehavior="Manual" 
+                                              UnloadedBehavior="Stop"
+                                              MediaOpened="Inicio_Track"
+                                              MediaEnded="Final_Track"
+                                              Volume="{Binding ElementName=panelControlMusica, Path=ValorVolumen, Mode=TwoWay}"/>
+
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

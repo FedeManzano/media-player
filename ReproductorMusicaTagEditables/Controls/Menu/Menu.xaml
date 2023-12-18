@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.Menu.Menu"
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="250"
+             x:Name="menuLateral">
+    <Control.Resources>
+        <ResourceDictionary Source="/Controls/Menu/MenuPrincipalTheme.xaml"/>
+    </Control.Resources>
+
+    <!-- Borde principal -->
+    <Border Style="{StaticResource bordePrincipal}"
+            Background="{StaticResource gradienteMenu}">
+
+        <!-- Pila de contenido completo -->
+        <StackPanel>
+            <!-- Logo -->
+            <StackPanel Style="{StaticResource pilaElementos}">
+                <Border Style="{StaticResource logoBorde}">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Icono/nota-musical.png"/>
+                    </Border.Background>
+                </Border>
+                <StackPanel Margin="15 0 0 0" VerticalAlignment="Center">
+                    <TextBlock Text="Media Player" 
+                            Style="{StaticResource tituloPrincipalLogo}"/>
+
+                    <TextBlock Text="Versión 3.0.0" 
+                            Style="{StaticResource tituloSecundarioLogo}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Separador -->
+            <Separator Style="{StaticResource separador}"/>
+
+            <!-- Botones del menú -->
+            <RadioButton Style="{StaticResource btnMenu}" 
+                         IsChecked="True"
+                         Command="{Binding ElementName=menuLateral,Path=CommandInicio}"
+                         ToolTip="Inicio todas las pistas">
+                <StackPanel Orientation="Horizontal" Cursor="">
+                    <fa:PackIconFontAwesome Kind="HomeSolid"
+                               Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
+                    <TextBlock Text="Inicio" 
+                            Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}" 
+                         Command="{Binding ElementName=menuLateral,Path=CommandHistorial}"
+                         ToolTip="Historial">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="HistorySolid"
+                                            Style="{StaticResource iconoItemMenu}"/>
+                    <TextBlock Text="Historial" 
+                               Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+                         Command="{Binding ElementName=menuLateral,Path=CommandArtistas}"
+                         ToolTip="Todos los artistas">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="UserAltSolid"
+                   Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
+                    <TextBlock Text="Artistas" 
+                Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+                         Command="{Binding ElementName=menuLateral,Path=CommandAlbumes}"
+                         ToolTip="Todos los álbumes">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="MusicSolid"
+                               Style="{StaticResource iconoItemMenu}"/>
+                    <TextBlock Text="Álbumes" 
+                            Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+                         Command="{Binding ElementName=menuLateral,Path=CommandGeneros}"
+                         ToolTip="Todos los géneros">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="VenusMarsSolid"
+                   Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
+                    <TextBlock Text="Géneros" 
+                Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+                         Command="{Binding ElementName=menuLateral,Path=CommandListas}"
+                         ToolTip="Crear lista de reproducción">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="PlusSolid"
+                                   Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
+                    <TextBlock Text="Mis Listas" 
+                               Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+             Command="{Binding ElementName=menuLateral,Path=CommandFavoritos}"
+             ToolTip="Crear lista de reproducción">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="ChartLineSolid"
+                       Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
+                    <TextBlock Text="Favoritos" 
+                   Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+                         Command="{Binding ElementName=menuLateral,Path=CommandDescargas}"
+                         ToolTip="Crear lista de reproducción">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="DownloadSolid"
+                                            Style="{StaticResource iconoItemMenu}"/>
+                    <TextBlock Text="Descargar" 
+                               Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+              Click="OnClickDoc"
+              ToolTip="Manual de uso del reproductor">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="GithubBrands"
+                                 Style="{StaticResource iconoItemMenu}"/>
+                    <TextBlock Text="Manual" 
+                    Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+        </StackPanel>
+    </Border>
+</UserControl>

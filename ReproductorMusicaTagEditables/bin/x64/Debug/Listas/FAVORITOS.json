@@ -1,0 +1,47 @@
+[
+  {
+    "Numero": "1",
+    "Titulo": "Back In Black",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Back In Black.mp3",
+    "Duracion": "04:22",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2620951282,
+    "Imagen": null,
+    "Cantidad": 2,
+    "UltimaReproduccion": "2023-12-17T05:16:42.6639603-03:00"
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Have a Drink on Me",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Have a Drink on Me.mp3",
+    "Duracion": "04:04",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2445998076,
+    "Imagen": null,
+    "Cantidad": 1,
+    "UltimaReproduccion": "2023-12-17T05:16:24.7680096-03:00"
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Shoot to Thrill",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Shoot to Thrill.mp3",
+    "Duracion": "05:25",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "red",
+    "DuracionLong": 3256195512,
+    "Imagen": null,
+    "Cantidad": 1,
+    "UltimaReproduccion": "2023-12-17T05:19:32.4411757-03:00"
+  }
+]
