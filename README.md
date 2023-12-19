@@ -5,7 +5,7 @@
 # Reproductor de música 
 
 ![License](https://img.shields.io/badge/LICENSE-%20MIT-green)
-![Version](https://img.shields.io/badge/VERSIÓN-%20V2.5.0-purple)
+![Version](https://img.shields.io/badge/VERSIÓN-%203.0.0-purple)
 
 Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundation) de la plataforma .NET Core de Microsoft.
 
@@ -21,7 +21,7 @@ Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundati
 ### Presentación 
 
 <p align="center">
-  <img src="https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/presentacion2.png?raw=true" />
+  <img src="https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/presentacionPrincipal.png?raw=true" />
 </p>
 
 
@@ -62,7 +62,7 @@ Sistemas operativos Windows a partir de la versión 7 en adelante con arquitectu
 
 ### Autor
 
-[Federico Manzano](https://github.com/FedericoManzano)
+[Federico Manzano](https://github.com/FedeManzano)
 
 ### Licencia
 

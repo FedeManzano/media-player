@@ -169,5 +169,5 @@ La vista de la pista de audio contiene los controles para reproducir el track, i
 ![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/pista.png?raw=true)
 
 > Cuando presionamos el botón :arrow_forward: de la pista no sólo reproduce el track, también carga el listado de canciones al cual pertenece. Por ejemplo: 
-Desde la página principal carga el listado de todas las canciones que tiene a disposición el reproductor. Si hacemos lo mismo desde la página de un álbum, carga el listado de canciones del álbum. Esto implica que cuando se cambia de canción se van a reproducir las del listado cargado, sin importar en la página que se encuentre el usuario.
+Desde la página principal carga el listado de todas las canciones que tiene a disposición el reproductor. Si hacemos lo mismo desde la página de un álbum, carga el listado de canciones del álbum. Esto implica que cuando el usuario cambia de canción se van a reproducir las del listado cargado, sin importar en la página en la que se encuentre el usuario.
 
