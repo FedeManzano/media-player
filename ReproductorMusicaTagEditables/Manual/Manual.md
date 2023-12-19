@@ -20,6 +20,11 @@
 	* :pencil2: [Edición por álbum](#edición-por-álbum)
 	* :pencil2: [Edición de números](#edición-de-números)
 * :musical_note:[Pista de audio](#pista-de-audio)	
+* :memo:[Listas de reproducción](#listas-de-reproducción)
+	* :heavy_plus_sign:[Crear lista](#crear-listas-de-reproducción)
+	* :heavy_plus_sign:[Listas de reproducción](#agregar-una-canción)
+	* :musical_note:[Agregar una canción](#agregar-una-canción)
+
 
 ### Descargar Reproductor
 
@@ -34,7 +39,7 @@ Dependiendo la arquitectura de su sistema operativo deberán seleccionar una de 
 
 El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.
 
-### Instalación
+### Instalación 
 
 Lo primero es descomprimir el archivo `MediaPlayer.zip` recién descargado.
 Dentro de la carpeta extraída nos aparecerá la siguiente estructura de archivos:
@@ -170,4 +175,24 @@ La vista de la pista de audio contiene los controles para reproducir el track, i
 
 > Cuando presionamos el botón :arrow_forward: de la pista no sólo reproduce el track, también carga el listado de canciones al cual pertenece. Por ejemplo: 
 Desde la página principal carga el listado de todas las canciones que tiene a disposición el reproductor. Si hacemos lo mismo desde la página de un álbum, carga el listado de canciones del álbum. Esto implica que cuando el usuario cambia de canción se van a reproducir las del listado cargado, sin importar en la página en la que se encuentre el usuario.
+
+### Listas de reproducción
+
+Se pueden crear listas de reproducción personalizadas junto con las páginas para visualizar estas listas.
+Las canciones puden agregarse de a una o en conjunto dependiendo las necesidades del usuario.
+
+#### Crear listas de reproducción
+
+Desde el menú principal de la aplicación, en el apartado `+ Mis Listas` presionar el botón `+ Crear` en la parte superior derecha de la vista.
+
+![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/crearLista.png?raw=true)
+
+Una vez creada la lista aparecera con el siguiente avatar indicando que de momento la lista está vacía.
+
+![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/avatarLista.png?raw=true)
+
+> Una vez creada la lista, el usuario ya puede agregar canciones a la misma.
+
+#### Agregar una canción
+
 
