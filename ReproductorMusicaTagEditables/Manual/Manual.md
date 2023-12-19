@@ -22,9 +22,11 @@
 * :musical_note:[Pista de audio](#pista-de-audio)	
 * :memo:[Listas de reproducción](#listas-de-reproducción)
 	* :heavy_plus_sign:[Crear lista](#crear-listas-de-reproducción)
-	* :heavy_plus_sign:[Agregar canción](#agregar-una-canción)
-	* :musical_note:[Agregar una canción](#agregar-una-canción)
-
+	* :heavy_plus_sign:[Agregar una cancion](#agregar-una-canción)
+	* :heavy_plus_sign:[Agregar varias cancion]()
+		* :heavy_plus_sign:[Agregar un álbum](#agregar-una-canción)
+		* :heavy_plus_sign:[Seleccionar canciones]()
+	* :heavy_minus_sign:[Eliminar de la lista]()
 
 ### Descargar Reproductor
 
