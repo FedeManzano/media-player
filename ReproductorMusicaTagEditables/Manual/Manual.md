@@ -1,7 +1,7 @@
 # :books: Manual Media Player 
 
 ![License](https://img.shields.io/badge/LICENSE-%20MIT-green)
-![Version](https://img.shields.io/badge/VERSIÓN-%203.0.0-purple)
+![Versión](https://img.shields.io/badge/VERSIÓN-%203.0.0-purple)
 
 ## :link: Indice de contenidos
 
@@ -17,6 +17,9 @@
 	* :open_file_folder: [Cargar Directorio](#cargar-directorio-a-editar)
 	* :pencil2: [Editar información mínima](#editar-información-mínima)
 	* :pencil2: [Edición completa](#edición-completa)
+	* :pencil2: [Edición por álbum](#edición-por-álbum)
+	* :pencil2: [Edición de números](#edición-de-números)
+* :musical_note:[Pista de audio](#pista-de-audio)	
 
 ### Descargar Reproductor
 
@@ -89,13 +92,13 @@ El formato contiene la fecha de creación del reapaldo y su código hash que no 
 
 #### Contenido de respaldo
 
-	:open_file_folder: Historial
-		:page_facing_up: HistorialAlbumes.json
-		:page_facing_up: HistorialListas.json
-	:open_file_folder: Listas
-		:open_file_folder: Regalos
-		:page_facing_up: FAVORITOS.json
-		:page_facing_up: ... Resto de las listas
+* :open_file_folder: Historial
+	* :page_facing_up: HistorialAlbumes.json
+	* :page_facing_up: HistorialListas.json
+* :open_file_folder: Listas
+	* :open_file_folder: Regalos
+	* :page_facing_up: FAVORITOS.json
+	* :page_facing_up: ... Resto de las listas
 
 > Lo que se respalda es la información del reproductor no los archivos de audio.
 
@@ -138,4 +141,33 @@ Con esto editamos los campos mínimos y suficientes. El resultado queda de la si
 Para editar toda la información simplemente hay que llenar los demás campos.
 
 ![Edición completa](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionCompleta.png?raw=true)
+
+#### Edición por álbum
+
+Podemos editar la información de los metadatos de los archivos de audio a través de la página del álbum. Si previamente estos archivos estaban asignados a un álbum especifico, entonces se puden editar estos datos desde la página del álbum.
+
+![Edición álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionAlbum.png?raw=true)
+
+Estos son tracks a medio editar, y para completar este proceso hay que presionar el botón `Modificar`. 
+Se abrirá el editor de tags con las canciones del álbum cargadas.
+
+![Edición álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionAlbumTags.png?raw=true)
+
+Después de darle al botón editar el resultado es el siguiente:
+
+![Edición álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionAlbumEditado.png?raw=true)
+
+#### Edición de números
+
+La edición de los números de tracks permite ordenar las canciones de forma creciente según este valor, si el mismo está disponible.
+Para hacerlo de forma automática seleccionamos todas las canciones en el editor de tags y luego le damos a el botón números. Esto va a enumerar de forma creciente los tracks.
+
+### Pista de audio
+
+La vista de la pista de audio contiene los controles para reproducir el track, ir a la página del álbum al cual pertenece, ir al la página del artista y la información del género y el año de lanzamiento del álbum.
+
+![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/pista.png?raw=true)
+
+> Cuando presionamos el botón :arrow_forward: de la pista no sólo reproduce el track, también carga el listado de canciones al cual pertenece. Por ejemplo: 
+Desde la página principal carga el listado de todas las canciones que tiene a disposición el reproductor. Si hacemos lo mismo desde la página de un álbum, carga el listado de canciones del álbum. Esto implica que cuando se cambia de canción se van a reproducir las del listado cargado, sin importar en la página que se encuentre el usuario.
 
