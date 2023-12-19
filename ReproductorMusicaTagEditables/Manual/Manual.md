@@ -48,7 +48,7 @@ MediaPlayer
 ```
 Ejecutamos el archivo :dvd:`setup.exe` y aceptamos en el asistente de instalación.
 
-![Asistente](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/asistente.png?raw=true)
+![Asistente](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/asistente.png)
 
 Luego, desde el menú de busqueda del sistema operativo, buscamos el :musical_note: `ReproductorMusicaTagEditables.exe`.  
 
