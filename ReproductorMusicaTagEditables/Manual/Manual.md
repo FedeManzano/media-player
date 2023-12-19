@@ -48,7 +48,7 @@ MediaPlayer
 ```
 Ejecutamos el archivo :dvd:`setup.exe` y aceptamos en el asistente de instalación.
 
-![Asistente](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/asistente.png?raw=true)
+![Asistente](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/asistente.png?raw=true)
 
 Luego, desde el menú de busqueda del sistema operativo, buscamos el :musical_note: `ReproductorMusicaTagEditables.exe`.  
 
@@ -155,7 +155,7 @@ Se abrirá el editor de tags con las canciones del álbum cargadas.
 
 Después de darle al botón editar el resultado es el siguiente:
 
-![Edición álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionAlbumEditado.png?raw=true)
+![Edición álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaEditada.png?raw=true)
 
 #### Edición de números
 
