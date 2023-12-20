@@ -23,10 +23,10 @@
 * :memo:[Listas de reproducción](#listas-de-reproducción)
 	* :heavy_plus_sign:[Crear lista](#crear-listas-de-reproducción)
 	* :heavy_plus_sign:[Agregar una cancion](#agregar-una-canción)
-	* :heavy_plus_sign:[Agregar varias cancion](#agregar-varias-canciones)
+	* :heavy_plus_sign:[Agregar varias canciones](#agregar-varias-canciones)
 	* :heavy_plus_sign:[Agregar un álbum](#agregar-un-álbum)
-	* :heavy_minus_sign:[Eliminar de la lista]()
-	* :heavy_minus_sign:[Eliminar canción]()
+	* :heavy_minus_sign:[Eliminar de la lista](#eliminar-lista-de-reproducción)
+	* :heavy_minus_sign:[Eliminar una canción]()
 
 ### Descargar Reproductor
 
@@ -222,4 +222,10 @@ La otra forma es del avatar del álbum que podemos encontrar en la página del a
 ![Agregar álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/artistaAgregarAlbum.png?raw=true)
 
 ![Agregar álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarAlbumTodos.png?raw=true)
+
+#### Eliminar lista de reproducción
+
+Para eliminar la lista de reprodución entera simplemente hay que darle clic derecho al avatar de la lista en la opción `+ Mis Listas`.
+
+![Eliminar lista](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/eliminarLista.png?raw=true)
 
