@@ -26,7 +26,10 @@
 	* :heavy_plus_sign:[Agregar varias canciones](#agregar-varias-canciones)
 	* :heavy_plus_sign:[Agregar un álbum](#agregar-un-álbum)
 	* :heavy_minus_sign:[Eliminar de la lista](#eliminar-lista-de-reproducción)
-	* :heavy_minus_sign:[Eliminar una canción]()
+	* :heavy_minus_sign:[Eliminar una canción](#eliminar-canción-de-una-lista)
+* :earth_americas: [Descargar de Youtube](#descargar-de-youtube)
+	* :arrow_down: [Muestra de descargas](#muestra-de-descarga-de-tres-canciones)
+	* :arrow_down: [Acceder a las canciones](#accesos-a-los-traks-descargados)
 
 ### Descargar Reproductor
 
@@ -228,4 +231,40 @@ La otra forma es del avatar del álbum que podemos encontrar en la página del a
 Para eliminar la lista de reprodución entera simplemente hay que darle clic derecho al avatar de la lista en la opción `+ Mis Listas`.
 
 ![Eliminar lista](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/eliminarLista.png?raw=true)
+
+#### Eliminar canción de una lista
+
+Desde la página de la lista, en la canción que el usuario quiera eliminar, dar clic derecho y seleccionalr eliminar de la lista.
+
+![Eliminar canción](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/eliminarCancion.png?raw=true)
+
+### Descargar de Youtube
+
+Desde la opción `Descargas` del menú principal accedemos a la sección descargas de la aplicación.
+
+![Página de descargas](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargas1.png?raw=true)
+
+#### Muestra de descarga de tres canciones
+
+Estado del reproductor mientras descarga tres canciones:
+
+
+![Descargando](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargas2.png?raw=true)
+
+> Mientras está descargando, el reproductor desactiva los accesos a otras páginas y a los botones para evitar que se pierda la descarga en curso.
+
+Una vez descargado el reproductor muestra lo siguiente:
+
+
+![Fin de descarga](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargas3.png?raw=true)
+
+#### Accesos a los traks descargados
+
+Desde los botones inferiores podemos **Editar**, **Mover** y/o **Eliminar** las canciones descargadas.
+
+> Para poder acceder a las canciones descargadas hay que moverlas a un directorio del equipo de usuario. Lo recomendable es primero editarlas y luego moverlas para diferenciarlas por su metadata.
+
+En secciones anteriores de esta documentación se muestra como editar las metadata de los archivos de audio. Una vez editados simplemente hay que moverlos a un directorio seleccionado por el usuario. A partir de esto, las canciones son agregadas automáticamente al listado ya existente de canciones y se puede tener acceso a ellas.
+
+### Historial
 
