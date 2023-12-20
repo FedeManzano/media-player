@@ -32,7 +32,9 @@
 	* :arrow_down: [Acceder a las canciones](#accesos-a-los-traks-descargados)
 * :clock330: [Historial](#historial)	
 * :thumbsup: [Favoritos](#favoritos)
-* :gift: [Regalos]()
+* :gift: [Regalos](#regalos)
+* :arrow_forward: [Reproducción](#reproducción)
+	* :frowning_person: [Reproducir canciones de un artista]()
 
 ### Descargar Reproductor
 
@@ -312,5 +314,20 @@ Si ingresamos al regalo de la imágen anterior iremos a la página del mismo.
 
 Haciendo clic derecho sobre el regalo y seleccionar la opción **Eliminar Regalo**.
 
+### Reproducción
 
+Siempre que reproduzcamos canciones individuales las mismas no se cargará n solas, sino que iran acompañadas del listado al cual pertenecen sin importar en la pagina que se encuentre el usuario.
+
+**Por ejemplo: Si desde la página de un álbum le damos al botón play de un track pasaremos a escuchar ese específico track, pero con el se cargarán en la lista actual todas las canciones del álbum.**
+
+> Si cambiamos de página y recorremos la aplición el listado no cambiará, por lo tanto, las canciones que se iran reproduciendo son las previamente seleccionadas.
+
+Lo mismo que pasa con los álbumes pasa con los géneros, los artistas y listas de reproducción.
+
+#### Reproducir canciones de un artista
+
+Para reproducir las canciones de un artistas simplemente el usuario accede a la página del artista que le interesa y le da al botón **Reproducir Todas**.
+
+
+![Reproducir](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/reproducir1.png?raw=true)
 
