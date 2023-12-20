@@ -34,7 +34,10 @@
 * :thumbsup: [Favoritos](#favoritos)
 * :gift: [Regalos](#regalos)
 * :arrow_forward: [Reproducción](#reproducción)
-	* :frowning_person: [Reproducir canciones de un artista]()
+	* :frowning_person: [Reproducir canciones de un artista](#reproducir-canciones-de-un-artista)
+	* :dvd: [Reproducir álbum](#reproducir-álbum)
+	* :twisted_rightwards_arrows: [Reproducción random](#reproducción-random)
+	* :bookmark_tabs: [Persistencia](#persistencia)
 
 ### Descargar Reproductor
 
@@ -329,5 +332,24 @@ Lo mismo que pasa con los álbumes pasa con los géneros, los artistas y listas 
 Para reproducir las canciones de un artistas simplemente el usuario accede a la página del artista que le interesa y le da al botón **Reproducir Todas**.
 
 
-![Reproducir](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/reproducir1.png?raw=true)
+![Reproducir](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/repoducir1.png?raw=true)
+
+
+#### Reproducir álbum
+
+Lo mismo que en el caso de los artistas pero desde la página del álbum.
+
+![Reproducir](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/reproducir2.png?raw=true)
+
+> Para las listas de reproducción y géneros musicales es exactamente el mismo proceso.
+
+#### Reproducción random
+
+Para alterar el orden de reproducción de la lista en curso, el usuario debe seleccionar el botón de rerpoducción aleatorea del control del track.
+
+![Reproducir](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/reproducir3.png?raw=true)
+
+#### Persistencia
+
+El reproductor almacena el listado de canciones actuales y la canción en curso para que cuando la aplicación se cierre estos datos no se pierdan. Cuando el usuario inicia nuevamente la aplicación se recura el listado y la canción en curso.
 
