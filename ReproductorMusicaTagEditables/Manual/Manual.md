@@ -249,7 +249,7 @@ Desde la opción `Descargas` del menú principal accedemos a la sección descarg
 Estado del reproductor mientras descarga tres canciones:
 
 
-![Descargando](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargas2.png?raw=true)
+![Descargando](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descarga2.png?raw=true)
 
 > Mientras está descargando, el reproductor desactiva los accesos a otras páginas y a los botones para evitar que se pierda la descarga en curso.
 
