@@ -23,9 +23,8 @@
 * :memo:[Listas de reproducción](#listas-de-reproducción)
 	* :heavy_plus_sign:[Crear lista](#crear-listas-de-reproducción)
 	* :heavy_plus_sign:[Agregar una cancion](#agregar-una-canción)
-	* :heavy_plus_sign:[Agregar varias cancion]()
-		* :heavy_plus_sign:[Agregar un álbum](#agregar-una-canción)
-		* :heavy_plus_sign:[Seleccionar canciones]()
+	* :heavy_plus_sign:[Agregar varias cancion](#agregar-varias-canciones)
+		* :heavy_plus_sign:[Agregar un álbum](#agregar-un-álbum)
 	* :heavy_minus_sign:[Eliminar de la lista]()
 
 ### Descargar Reproductor
@@ -187,14 +186,28 @@ Las canciones puden agregarse de a una o en conjunto dependiendo las necesidades
 
 Desde el menú principal de la aplicación, en el apartado `+ Mis Listas` presionar el botón `+ Crear` en la parte superior derecha de la vista.
 
-![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/crearLista.png?raw=true)
+![Creación de lista](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/crearLista.png?raw=true)
 
 Una vez creada la lista aparecera con el siguiente avatar indicando que de momento la lista está vacía.
 
-![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/avatarLista.png?raw=true)
+![Lista vacía](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/avatarLista.png?raw=true)
 
 > Una vez creada la lista, el usuario ya puede agregar canciones a la misma.
 
 #### Agregar una canción
 
+En la vista de la pista con un clic derecho abrimos un menú contextual, en él seleccionar la opción agregar a lista. esto abrirá una nueva ventana en la cual se enlistan todas las listas que haya creado el usuario.
 
+![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarCancion.png?raw=true)
+
+
+#### Agregar varias canciones
+
+Para agregar varias canciones a la lista que el usuario quiera hay que marcar varias canciones del listado. Esto hará que aparezcan dos botones que permitirán `Desmarcar Todas` y `Agregar`.
+Cuando el usuario presiona el botón aceptar se abrirá la ventana vista anteriormente con todas las canciones a agregar cargadas.
+
+![Pista de audio](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarVarias.png?raw=true)
+
+> Esto mismo podemos hacerlo desde la página de los álbumes agregando las canciones que el usuario seleccione del álbum.
+
+#### Agregar un álbum
