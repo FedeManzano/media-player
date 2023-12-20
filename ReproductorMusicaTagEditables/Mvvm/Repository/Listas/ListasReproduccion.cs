@@ -308,14 +308,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             foreach(string p in paths)
             {
                 string nombre = ExtraerNombreArchivo(p);
-                //if (EsMenorQueLAFechaActual(nombre))
-                //{
+                if (EsMenorQueLAFechaActual(nombre))
+                {
                     List<Cancion> l = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(p));
                     if (l != null && l.Any())
                     {
                         dicCanciones[nombre] = l;
                     }
-                //}
+                }
             }
             return dicCanciones;
         }

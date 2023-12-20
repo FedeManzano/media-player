@@ -179,7 +179,7 @@ namespace ReproductorMusicaTagEditables
 
         private void Menu_DocClick(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Manual.md");
+            System.Diagnostics.Process.Start("https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Manual.md");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

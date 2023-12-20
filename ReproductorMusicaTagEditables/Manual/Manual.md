@@ -45,9 +45,9 @@ Para descargar el reproductor lo podemos hacer desde los siguientes enlaces:
 
 Dependiendo la arquitectura de su sistema operativo deberán seleccionar una de estas dos opciones: 
 
-:arrow_down: [Descarga Instalador v3.0.0 32 Bits](https://mega.nz/file/5RVzlZAJ#qXCj2Hqt6S9h7CTT59D8jn7qh_5LQHuOnYSAWH-o9qk)
+:arrow_down: [Descarga Instalador v3.0.0 32 Bits](https://mega.nz/file/UUtEyKyA#JU3B77Yjk1r9EjLBaT9htchKpgYewk8kVMtzsCvdwXg)
 
-:arrow_down: [Descarga Instalador v3.0.0 64 Bits](https://mega.nz/file/VNtSCDyT#dzuM746-4SdvtUAdA7fB8EgpPOfyGMF4NOCqefASkTA)
+:arrow_down: [Descarga Instalador v3.0.0 64 Bits](https://mega.nz/file/IRMwBJzB#NdRlIjXmTbzb9FQhL26mkpfumHftY51v9Q57bL5eDv4)
 
 
 El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.
@@ -332,7 +332,7 @@ Lo mismo que pasa con los álbumes pasa con los géneros, los artistas y listas 
 Para reproducir las canciones de un artistas simplemente el usuario accede a la página del artista que le interesa y le da al botón **Reproducir Todas**.
 
 
-![Reproducir](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/repoducir1.png?raw=true)
+![Reproducir](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/rerpoducir1.png?raw=true)
 
 
 #### Reproducir álbum
