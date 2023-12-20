@@ -31,6 +31,8 @@
 	* :arrow_down: [Muestra de descargas](#muestra-de-descarga-de-tres-canciones)
 	* :arrow_down: [Acceder a las canciones](#accesos-a-los-traks-descargados)
 * :clock330: [Historial](#historial)	
+* :thumbsup: [Favoritos](#favoritos)
+* :gift: [Regalos]()
 
 ### Descargar Reproductor
 
@@ -278,4 +280,37 @@ Si el usuario hace clic en cualquier álbum o listas, el reproductor lo enviará
 > Al historial podemos accedes desde la opción del menú principal o desde la página principal en el botón **más recientes**.
 
 ![Accesos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/historial2.png?raw=true)
+
+### Favoritos
+
+Listado generado automáticamente con el fin de mostrale al usuarios las canciones preferidas en orden decreciente en función a la cantidad de veces que las escucha.
+
+![Accesos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/favoritos.png?raw=true)
+
+> Esta lista no puede eliminarse. Pero permite eliminar canciones como vimos en secciones anteriores a esta documentación.
+
+### Regalos
+
+Todos los meses el reproductor genera listas de reproducción automáticas, con las cincuenta canciones más escuchadas del mes anterior.
+El acceso a estas listas, ordenadas por año y mes de creación lo hacemos desde la página principal.
+
+![Regalos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/regalos1.png?raw=true)
+
+Cuando ingresamos a este ícono nos enviará a la página de todos los regalos guardados.
+
+![Regalos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/regalo2.png?raw=true)
+
+
+Si ingresamos al regalo de la imágen anterior iremos a la página del mismo.
+
+![Regalos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/regalo3.png?raw=true)
+
+
+> De esta lista no podemos eliminar canciones. Pero podemos eliminar el regalo entero si lo deseamos, como se muestra en la siguiente imágen:
+
+![Regalos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/regalo4.png?raw=true)
+
+Haciendo clic derecho sobre el regalo y seleccionar la opción **Eliminar Regalo**.
+
+
 
