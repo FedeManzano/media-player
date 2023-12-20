@@ -151,15 +151,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 return new List<Cancion>();
             }
 
-
-            InfoReproductor i = InfoReproductor.DameInstancia();
-
-
+        
             return origen.Where(c => File.Exists(c.Path)).Select(c =>
             {
                 if (c.Equals(ca))
                 {
-                    return ca;
+                    c.EstadoColor = ca.EstadoColor;
+                    c.Cantidad++;
+                    return c;
                 }
                 c.EstadoColor = "White";
                 return c;

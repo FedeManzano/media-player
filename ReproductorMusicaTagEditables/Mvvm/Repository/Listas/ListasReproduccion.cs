@@ -367,6 +367,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         
         public static void AgregarCancionRegalo(Cancion c)
         {
+            c.Cantidad = 1;
             if(!Directory.Exists(PATH_REGALOS))
             {
                 Directory.CreateDirectory(PATH_REGALOS);
@@ -462,7 +463,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         {
             listado = listado.BlanquearListado(c);
             if(!listado.Exists(cl => cl.Equals(c)))
+            {
                 listado.Add(c);
+            }   
             return listado;
         }
 
