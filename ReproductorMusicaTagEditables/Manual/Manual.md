@@ -24,8 +24,9 @@
 	* :heavy_plus_sign:[Crear lista](#crear-listas-de-reproducción)
 	* :heavy_plus_sign:[Agregar una cancion](#agregar-una-canción)
 	* :heavy_plus_sign:[Agregar varias cancion](#agregar-varias-canciones)
-		* :heavy_plus_sign:[Agregar un álbum](#agregar-un-álbum)
+	* :heavy_plus_sign:[Agregar un álbum](#agregar-un-álbum)
 	* :heavy_minus_sign:[Eliminar de la lista]()
+	* :heavy_minus_sign:[Eliminar canción]()
 
 ### Descargar Reproductor
 
@@ -211,3 +212,14 @@ Cuando el usuario presiona el botón aceptar se abrirá la ventana vista anterio
 > Esto mismo podemos hacerlo desde la página de los álbumes agregando las canciones que el usuario seleccione del álbum.
 
 #### Agregar un álbum
+
+Para agregar todo un álbum, el usuario puede hacerlo desde la página del álbum con el botón agregar en la parte superior de la página o haciendo clic derecho sobre el avatar del álbum desde la opción `Albumes` del menú principal.
+
+![Agregar álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaAlbumAgregar.png?raw=true)
+
+La otra forma es del avatar del álbum que podemos encontrar en la página del artista o en la opción `Albumes` del menú principal.
+
+![Agregar álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/artistaAgregarAlbum.png?raw=true)
+
+![Agregar álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarAlbumTodos.png?raw=true)
+
