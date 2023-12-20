@@ -30,6 +30,7 @@
 * :earth_americas: [Descargar de Youtube](#descargar-de-youtube)
 	* :arrow_down: [Muestra de descargas](#muestra-de-descarga-de-tres-canciones)
 	* :arrow_down: [Acceder a las canciones](#accesos-a-los-traks-descargados)
+* :clock330: [Historial](#historial)	
 
 ### Descargar Reproductor
 
@@ -267,4 +268,14 @@ Desde los botones inferiores podemos **Editar**, **Mover** y/o **Eliminar** las 
 En secciones anteriores de esta documentación se muestra como editar las metadata de los archivos de audio. Una vez editados simplemente hay que moverlos a un directorio seleccionado por el usuario. A partir de esto, las canciones son agregadas automáticamente al listado ya existente de canciones y se puede tener acceso a ellas.
 
 ### Historial
+
+En el historial de la plicación se conforman dos listados, el primero, contiene los últimos siete álbumes escuchados por el usuario, el segundo contiene las últimas siete listas de reprodución escuchadas. A partir de esto podemos acceder rápido a las canciones que el usuario escucha con mas frecuencia y permite automátizar el agregado de canciones a las listas de reproducción.
+
+![Historial](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/historial1.png?raw=true)
+
+Si el usuario hace clic en cualquier álbum o listas, el reproductor lo enviará a la página asociada.
+
+> Al historial podemos accedes desde la opción del menú principal o desde la página principal en el botón **más recientes**.
+
+![Accesos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/historial2.png?raw=true)
 
