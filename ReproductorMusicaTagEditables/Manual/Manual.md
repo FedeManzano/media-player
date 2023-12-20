@@ -290,7 +290,7 @@ Si el usuario hace clic en cualquier álbum o listas, el reproductor lo enviará
 
 Listado generado automáticamente con el fin de mostrale al usuarios las canciones preferidas en orden decreciente en función a la cantidad de veces que las escucha.
 
-![Accesos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/favoritos.png?raw=true)
+![Accesos](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/favoritos1.png?raw=true)
 
 > Esta lista no puede eliminarse. Pero permite eliminar canciones como vimos en secciones anteriores a esta documentación.
 
