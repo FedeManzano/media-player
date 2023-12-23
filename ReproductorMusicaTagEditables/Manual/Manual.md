@@ -138,13 +138,13 @@ Para poder filtrar las canciones agregadas al reproductor por Álbumes, Artistas
 
 Desde el botón `Seleccionar` seleccionamos el directorio con los archivos de audio que queremos editar. Si el mismo contiene varios subdirectorios estos también serán cargados.
 
-> Recomendación: Cargar canciones pertenecientes a un Álbum especifico para que sea más facil editar los campos de los archivos.
+> Recomendación: Cargar canciones pertenecientes a un Álbum específico para que sea más fácil editar los campos de los archivos.
 
 #### Editar información mínima
 
 La información mínima que es necesaria para poder buscar y filtrar la información musical son los campos `Álbum` y `Artista`.
 
-Completando estos dos campos el reproductor va a poder dar acceso rápido a las canciones y generar el historial de reproducción. También a partir de esto podemos crear listas de reproducción con las canciones que se seleccionen por el usuario.
+Completando estos dos campos el reproductor va a poder dar acceso rápido a las canciones y generar el historial de reproducción. También, a partir de esto podemos crear listas de reproducción con las canciones que se seleccionen por el usuario.
 
 El procedimiento para realizar esto es marcar todas las caciones desde el botón `Marcar Todas` en la parte superior.
 
@@ -162,7 +162,7 @@ Para editar toda la información simplemente hay que llenar los demás campos.
 
 #### Edición por álbum
 
-Podemos editar la información de los metadatos de los archivos de audio a través de la página del álbum. Si previamente estos archivos estaban asignados a un álbum especifico, entonces se puden editar estos datos desde la página del álbum.
+Podemos editar la información de los metadatos de los archivos de audio a través de la página del álbum. Si previamente estos archivos estaban asignados a un álbum específico, entonces se puden editar estos datos desde la página del álbum.
 
 ![Edición álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/edicionAlbum.png?raw=true)
 
@@ -228,7 +228,7 @@ Para agregar todo un álbum, el usuario puede hacerlo desde la página del álbu
 
 ![Agregar álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaAlbumAgregar.png?raw=true)
 
-La otra forma es del avatar del álbum que podemos encontrar en la página del artista o en la opción `Albumes` del menú principal.
+La otra forma es del avatar del álbum que podemos encontrar en la página del artista o en la opción `Álbumes` del menú principal.
 
 ![Agregar álbum](https://github.com/FedeManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/artistaAgregarAlbum.png?raw=true)
 
