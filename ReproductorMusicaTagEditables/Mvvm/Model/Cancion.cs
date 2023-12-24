@@ -160,5 +160,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         {
             return Album.CompareTo(other.Album);
         }
+
     }
 }

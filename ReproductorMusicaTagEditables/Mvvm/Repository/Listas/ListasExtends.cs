@@ -1,5 +1,6 @@
 ﻿
 using Newtonsoft.Json;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System.Collections.Generic;
@@ -154,7 +155,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         
             return origen.Where(c => File.Exists(c.Path)).Select(c =>
             {
-                if (c.Equals(ca))
+                if (c.LaMismaCancion(ca))
                 {
                     c.EstadoColor = ca.EstadoColor;
                     c.Cantidad++;

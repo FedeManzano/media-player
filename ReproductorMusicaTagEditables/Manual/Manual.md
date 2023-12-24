@@ -45,9 +45,9 @@ Para descargar el reproductor lo podemos hacer desde los siguientes enlaces:
 
 Dependiendo la arquitectura de su sistema operativo deberán seleccionar una de estas dos opciones: 
 
-:arrow_down: [Descarga Instalador v3.0.1 32 Bits](https://mega.nz/file/1JsExDoJ#MJj3dTxKAqVwwYr6gTTBbQ7B9Nnz4_BipPZOSu9ZhrI)
+:arrow_down: [Descarga Instalador v3.0.2 32 Bits](https://mega.nz/file/cdM3WJ5A#m9G9VEDtbV04kVDJf1rLKikHbVRX81I2RB5krYCAfY0)
 
-:arrow_down: [Descarga Instalador v3.0.1 64 Bits](https://mega.nz/file/VIFw3SZD#ZIjh4qUaLJLt4iiHWMpD9IOS8X7yoAV-qq614AiDzlc)
+:arrow_down: [Descarga Instalador v3.0.2 64 Bits](https://mega.nz/file/pBNiEDRb#1tC28bMVX1_u0kejt1XA6gfcvhPg9okBIXiotMKDv8I)
 
 
 El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.

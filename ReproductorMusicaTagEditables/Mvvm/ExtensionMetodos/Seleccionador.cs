@@ -34,5 +34,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             Random r = new Random();
             return r.Next(0, origen.Count);
         }
+        public static bool LaMismaCancion(this Cancion origen, Cancion otraCancion)
+        {
+            if (otraCancion == null)
+                return false;
+            return origen.Titulo == otraCancion.Titulo && origen.Album == otraCancion.Album && origen.Artista == otraCancion.Artista;
+        }
+
     }
+    
 }

@@ -144,20 +144,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
             return true;
         }
-
-        private static bool LaMismaCancion(Cancion c1, Cancion c2)
-        {
-            return c1.Titulo == c2.Titulo && c1.Artista == c2.Artista && c1.Album == c2.Album;
-        }
-
         public static bool RemoverCancion(string nombreLista, Cancion c)
         {
             if (string.IsNullOrEmpty(nombreLista)) return false;
             if (c == null) return false;
             if (!ExisteLista(nombreLista)) return false;
 
-            List<Cancion> listado = nombreLista.ObtenerListadoReproduccion();
-            listado = listado.Where(cl => !LaMismaCancion(cl,c)).ToList();
+            List<Cancion> listado = nombreLista.Ruta().ObtenerListadoReproduccion();
+            listado = listado.Where(cl => !cl.LaMismaCancion(c)).ToList();
           
             try
             {
@@ -260,18 +254,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         public static bool AgregarCancionAFavoritos(Cancion c)
         {
             if(c == null) return false;
-
             if (!ExisteLista("FAVORITOS"))
             {
                 Crear("FAVORITOS");
             }
+            c.Cantidad = 0;
             if(c.Artista != "Desconocido" && c.Album != "Desconocido")
             {
                 List<Cancion> listaCanciones = "FAVORITOS".Ruta().ObtenerListadoReproduccion();
 
                 listaCanciones.ForEach(cl =>
                 {
-                    if (cl.Equals(c))
+                    if (cl.LaMismaCancion(c))
                     {
                         c.Cantidad = cl.Cantidad;
                     }
@@ -462,7 +456,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         private static List<Cancion> AgregarYBlanquearCanciones(List<Cancion> listado, Cancion c)
         {
             listado = listado.BlanquearListado(c);
-            if(!listado.Exists(cl => cl.Equals(c)))
+            if(!listado.Exists(cl => cl.LaMismaCancion(c)))
             {
                 listado.Add(c);
             }   
