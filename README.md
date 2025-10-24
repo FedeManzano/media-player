@@ -20,9 +20,6 @@ Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundati
 
 ### Presentación 
 
-<a href="https://fotos.miarroba.com/bodystyle/16-presentacionprincipal/" title="presentacionPrincipal">
-<img width="120" height="90" src=""></a>
-
 
 <p align="center">
   <img src="https://fotos.miarroba.com/th/823c/3569A968322B68FB37B02468FB37A0.png" />
@@ -71,6 +68,7 @@ Sistemas operativos Windows a partir de la versión 7 en adelante con arquitectu
 ### Licencia
 
 MIT.
+
 
 
 
