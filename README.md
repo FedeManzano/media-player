@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Icono/nota-musical.ico" />
+  <img src="https://fotos.miarroba.com/th/1acd/3369A967341F68FB36B13468FB36A2.png" widht="250px" height="250px"/>
 </p>
-
 # Reproductor de música 
 
 ![License](https://img.shields.io/badge/LICENSE-%20MIT-green)
@@ -67,4 +66,5 @@ Sistemas operativos Windows a partir de la versión 7 en adelante con arquitectu
 ### Licencia
 
 MIT.
+
 
